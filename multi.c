@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]) {
-    float a,b,c,d,y,p,x,q,nm;
+    float a,b,c,d,y,p,x,q,nm,pi,ar,vol,per;
+	pi = 3.14;
 	printf("Bem-Vindo ao programa utilitario \n");
     printf("Digite 1 para calculadora \n");
     printf("Digite 2 para temperatura \n");
     printf("Digite 3 para medidas \n");
     scanf("%f", &a);
-    if (a == 1) { 
+    
+	if (a == 1) { 
     printf("Digite 1 para adicao \n");
     printf("Digite 2 para subtracao \n");
     printf("Digite 3 para multiplicacao \n");
@@ -45,7 +44,12 @@ int main(int argc, char *argv[]) {
     scanf("%f", &c);
     d = b / c;
     printf("o resultado e: %.2f\n", d );
-    } else if (a == 2) {
+    } if (a > 3) {
+    printf("Invalido!\n");
+     } if (y > 4) {
+    printf("Invalido!\n");
+	
+	} if (a == 2) {
     printf("Digite 1 para fazer Celsius para Fahrenheit\n");
     printf("Digite 2 para fazer Fahrenheit para Celsius\n");
     scanf("%f", &q);
@@ -59,7 +63,10 @@ int main(int argc, char *argv[]) {
     scanf("%f", &b);
     d = (b - 32) / 1.8;
     printf("o resultado e: %.2f\n", d );
-	} if (q == 3) {
+     } if (q > 2) {
+    printf("Invalido!\n");
+	
+	} else if (a == 3) {
     printf("Digite 1 para calcular area\n");
     printf("Digite 2 para calcular perimetro\n");
     printf("Digite 3 para calcular volume\n");
@@ -68,27 +75,108 @@ int main(int argc, char *argv[]) {
     printf("Digite 1 para calcular quadrado\n ");
     printf("Digite 2 para calcular retangulo\n ");
     printf("Digite 3 para calcular circulo\n ");
-    printf("Digite 4 para calcular cilindro\n ");
-    printf("Digite 5 para calcular triangulo\n ");
-    scanf("%f", &x); 	
-    } else if (nm == 2) {
-    printf("Digite 1 para calcular quadrado\n ");
-    printf("Digite 2 para calcular retangulo\n ");
-    printf("Digite 3 para calcular circulo\n ");
-    printf("Digite 4 para calcular cilindro\n ");
-    printf("Digite 5 para calcular triangulo\n ");
-    scanf("%f", &x); 	
-	} else if (nm == 3) {
-    printf("Digite 1 para calcular quadrado\n ");
-    printf("Digite 2 para calcular retangulo\n ");
-    printf("Digite 3 para calcular circulo\n ");
-    printf("Digite 4 para calcular cilindro\n ");
-    printf("Digite 5 para calcular triangulo\n ");
-    scanf("%f", &x); 	
-    } 
-	system("pause");
+    printf("Digite 4 para calcular triangulo\n ");
+    scanf("%f", &ar); 	
+    } if (ar == 1) {
+    printf("Digite a medida do lado: ");
+    scanf("%f", &b);
+    d = b * b;
+    printf("A area e: %.2f\n", d );
+    } if (ar == 2) {
+    printf("Digite a base: ");
+    scanf("%f", &b);
+    printf("Digite a altura: ");
+    scanf("%f", &c);
+    d = b * c;
+    printf("A area e: %.2f\n", d );
+    } if (ar == 3) {
+    printf("Digite o raio: ");
+    scanf("%f", &b);
+    d = (b * b) * pi;
+    printf("A area e: %.2f\n", d );
+	} if (ar == 4) {
+     printf("Digite a base: ");
+    scanf("%f", &b);
+    printf("Digite a altura: ");
+    scanf("%f", &c);
+    d = (b * c) / 2;
+    printf("A area e: %.2f\n", d );
+     } if (ar > 4) {
+    printf("Invalido!\n");
 	
+	} if (nm == 2) {
+    printf("Digite 1 para calcular quadrado\n ");
+    printf("Digite 2 para calcular retangulo\n ");
+    printf("Digite 3 para calcular circulo\n ");
+    printf("Digite 4 para calcular triangulo\n ");
+    scanf("%f", &per); 	
+	} if (per == 1) {
+    printf("Digite a medida do lado: ");
+    scanf("%f", &b);
+    d = b + b + b + b;
+    printf("O perimetro e: %.2f\n", d );
+    } if (per == 2) {
+    printf("Digite a base: ");
+    scanf("%f", &b);
+    printf("Digite a altura: ");
+    scanf("%f", &c);
+    d = b + b + c + c;
+    printf("O perimetro e: %.2f\n", d );
+    } if (per == 3) {
+    printf("Digite o raio: ");
+    scanf("%f", &b);
+    d = (2 * pi) * b;
+    printf("O perimetro e: %.2f\n", d );
+	} if (per == 4) {
+    printf("Digite a medida do lado: ");
+    scanf("%f", &b);
+    d = b + b + b;
+    printf("O perimetro e: %.2f\n", d );
+     } if (per > 4) {
+    printf("Invalido!\n");
+	
+	}if (nm == 3) {
+    printf("Digite 1 para calcular cubo\n ");
+    printf("Digite 2 para calcular paralelepipedo\n ");
+    printf("Digite 3 para calcular cilindro\n ");
+    printf("Digite 4 para calcular piramide\n ");
+    scanf("%f", &vol); 	
+    } if (vol == 1) {
+    printf("Digite a medida da aresta: ");
+    scanf("%f", &vol);
+    d = b * b * b;
+    printf("O volume e: %.2f\n", d );
+    } if (vol == 2) {
+    printf("Digite a altura: ");
+    scanf("%f", &b);
+    printf("Digite o comprimento: ");
+    scanf("%f", &c);
+    printf("Digite a largura: ");
+    scanf("%f", &y);
+    d = b * c * y;
+    printf("O volume e: %.2f\n", d );
+    } if (vol == 3) {
+    printf("Digite o raio: ");
+    scanf("%f", &b);
+    printf("Digite a altura: ");
+    scanf("%f", &c);
+    d = (b * b) * (c * pi);
+    printf("O volume e: %.2f\n", d );
+	} if (vol == 4) {
+    printf("Digite a area da base: ");
+    scanf("%f", &b);
+    printf("Digite a altura: ");
+    scanf("%f", &c);
+    d = (b * c) / 3;
+    printf("O volume e: %.2f\n", d );
+     } if (vol > 4) {
+    printf("Invalido!\n");
+     } if (nm > 3) {
+    printf("Invalido!\n");
+} 
+    system("pause");
 }
+
      
 	 
 
